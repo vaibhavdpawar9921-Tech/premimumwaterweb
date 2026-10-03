@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Outfit', sans-serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Royal Premium Water Design System Colors */
+  --color-royal-deep: #0B2D5C;
+  --color-royal-blue: #1557A6;
+  --color-aqua: #00A8C6;
+  --color-light-aqua: #E8F9FC;
+  --color-pure-white: #FFFFFF;
+  --color-dark-text: #102033;
+  --color-secondary-text: #536579;
+  --color-light-bg: #F5FAFC;
+  --color-royal-border: #D9E8F0;
+  --color-gold: #D4AF37;
+  --color-dark-navy: #071D3A;
+
+  /* Official Shadows */
+  --shadow-royal-card: 0 10px 30px rgba(11, 45, 92, 0.08);
+  --shadow-royal-hover: 0 15px 40px rgba(11, 45, 92, 0.14);
+}
+
+@layer base {
+  :root {
+    --royal-deep: #0B2D5C;
+    --royal-blue: #1557A6;
+    --aqua: #00A8C6;
+    --light-aqua: #E8F9FC;
+    --white: #FFFFFF;
+    --dark-text: #102033;
+    --secondary-text: #536579;
+    --light-bg: #F5FAFC;
+    --border: #D9E8F0;
+    --gold: #D4AF37;
+    --dark-navy: #071D3A;
+
+    --font-heading: 'Outfit', sans-serif;
+    --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #536579;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    min-width: 320px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    color: #0B2D5C;
+  }
+
+  /* Accessible focus indicators using brand Aqua */
+  :focus-visible {
+    outline: 2px solid #00A8C6;
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: #00A8C6;
+    color: #FFFFFF;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.6deg);
+  }
+}
+
+@keyframes waveSlow {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.92);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+@keyframes rippleSoft {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: waveSlow 18s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+.animate-ripple {
+  animation: rippleSoft 4s ease-in-out infinite;
+}
+

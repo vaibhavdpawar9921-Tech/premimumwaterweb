@@ -1,0 +1,6 @@
+{
+  "name": "Royal Premium Water",
+  "description": "Royal Premium Water — premium packaged drinking water focused on purity, quality and reliable service.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
